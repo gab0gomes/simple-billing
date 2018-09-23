@@ -1,16 +1,11 @@
-const INITIAL_STATE = {
-	summary: {
-		credit: 0,
-		debit: 0
-	}
-};
+const INITIAL_STATE = { list: [] };
 
 export default (state = INITIAL_STATE, action) => {
 	switch (action.type) {
-		case 'BILLING_SUMMARY_FETCHED':
+		case 'BILLING_CYCLES_FETCHED':
 			return {
 				...state,
-				summary: action.payload.data
+				list: action.payload.data
 			}
 		default:
 			return state;
