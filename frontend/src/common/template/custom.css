@@ -3,3 +3,11 @@
 	bottom: 0px;
 	width: 100%;
 }
+
+button:not(:first-of-type) {
+	margin-left: 5px;
+}
+
+.table-actions {
+	width: 150px;
+}
