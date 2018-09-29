@@ -21,11 +21,12 @@ class Dashboard extends Component {
 				<Content>
 					<Row>
 						<ValueBox cols='12 4' color='green' icon='bank'
-							value={ `R$ ${ credit }` } text='Total de Créditos'/>
+							value={ `R$ ${ credit.toFixed(2) }` } text='Total de Créditos'/>
 						<ValueBox cols='12 4' color='red' icon='credit-card'
-							value={ `R$ ${ debit }` } text='Total de Débitos'/>
+							value={ `R$ ${ debit.toFixed(2) }` } text='Total de Débitos'/>
 						<ValueBox cols='12 4' color='blue' icon='money'
-							value={ `R$ ${ credit - debit }` } text='Valor Consolidado'/>
+							value={ `R$ ${ (credit - debit).toFixed(2) }` }
+							text='Valor Consolidado'/>
 					</Row>
 				</Content>
 			</div>
